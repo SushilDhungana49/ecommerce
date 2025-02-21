@@ -1,0 +1,100 @@
+.productDisplay {
+  display: flex;
+  gap: 50px;
+  height: 584px;
+  margin: auto 100px;
+}
+.productDisplay-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.productDisplay .productDisplay-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: -6px;
+}
+.productDisplay .isActive {
+  background-color: pink;
+}
+.productDisplay-images img {
+  width: 100px;
+}
+.productDisplay-mainImage {
+  height: 537px;
+  margin-top: 0px;
+}
+
+.productDisplay-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.productDisplay-prices {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.productDisplay-oldPrice {
+  text-decoration: line-through;
+  font-weight: 600;
+  color: hsl(0, 0%, 40%);
+  font-size: 1.3rem;
+}
+
+.productDisplay-newPrice {
+  color: hsl(0, 80%, 60%);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.productDisplay-star {
+  display: flex;
+  gap: 6px;
+}
+.productDisplay-star img {
+  height: 18px;
+}
+.productDisplay h1 {
+  font-weight: 600;
+  line-height: 40px;
+  color: hsl(0, 0%, 20%);
+}
+.productDisplay-right h2 {
+  color: hsl(0, 0%, 40%);
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.productDisplay-sizeList {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.productDisplay-sizeList div:hover {
+  cursor: pointer;
+}
+.productDisplay-sizeList div {
+  border: 1px solid hsl(0, 0%, 50%);
+  padding: 10px 20px;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 2px;
+}
+.productDisplay-right button {
+  width: 200px;
+  padding: 15px 15px;
+  background-color: hsl(10, 100%, 60%);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 500;
+}
+.productDisplay-category {
+  margin-bottom: 20px;
+}
+.productDisplay-category span {
+  font-weight: 600;
+}

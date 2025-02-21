@@ -1,0 +1,27 @@
+.orders img {
+  width: 80px;
+}
+.orders-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.orders-info span {
+  color: hsl(0, 0%, 40%);
+}
+.orders-order {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 0.5fr;
+  margin: 20px 50px;
+  align-items: center;
+}
+.orders button {
+  height: fit-content;
+  padding: 10px 20px;
+}
+.greenCircle {
+  display: inline-block;
+  border: 5px solid hsl(120, 100%, 50%);
+  border-radius: 50%;
+}

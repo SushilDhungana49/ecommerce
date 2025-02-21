@@ -1,0 +1,124 @@
+.addProduct {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: calc(100vw - 317px);
+  padding: 50px;
+  gap: 10px;
+  min-height: calc(100vh - 118px);
+}
+.addProduct label {
+  color: hsl(0, 0%, 30%);
+  font-size: 1.2rem;
+}
+.addProduct-inputText input {
+  width: 100%;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  padding: 5px 20px;
+  margin-top: 5px;
+}
+.addProduct-prices {
+  margin: 6px auto;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.addProduct-prices input {
+  width: 30vw;
+}
+.addProduct-select select {
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 150px;
+  margin-top: 10px;
+}
+.addProduct-sizeList {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.addProduct-sizeList div {
+  margin-top: 10px;
+  border: 1px solid hsl(0, 0%, 50%);
+  padding: 10px 20px;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.addProduct .isActive {
+  background-color: pink;
+}
+.form-bestseller {
+  display: flex;
+  gap: 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageUploads img {
+  margin-top: 15px;
+  display: inline-flex;
+  width: 120px;
+  height: 120px;
+  align-self: center;
+}
+
+form .addProduct-button {
+  align-self: center;
+}
+.addProduct-button {
+  background-color: hsl(240, 100%, 60%);
+  color: white;
+  border: none;
+  padding: 5px 30px;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.addProduct-button:hover {
+  background-color: hsl(240, 100%, 50%);
+}
+.addProduct-textarea textarea {
+  width: 100%;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  padding: 5px 20px;
+  margin-top: 5px;
+}
+.imageUploads {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .addProduct {
+    width: 100%;
+    margin: 30px auto 0;
+  }
+  .addProduct-prices {
+    flex-direction: column;
+  }
+
+  .addProduct input {
+    width: 100%;
+  }
+  .form-bestseller input {
+    width: fit-content;
+  }
+  .form-bestseller {
+    justify-content: center;
+  }
+  .addProduct div {
+    text-align: center;
+  }
+  .addProduct img {
+    margin-top: 10px;
+  }
+}

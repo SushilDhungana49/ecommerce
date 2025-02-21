@@ -1,0 +1,53 @@
+.loginSignup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(250, 70%, 88%);
+}
+.login-box {
+  width: 600px;
+  background-color: hsl(0, 0%, 95%);
+  padding: 50px;
+  border-radius: 20px;
+}
+.login-box h1 {
+  font-weight: 500;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.loginSignup p {
+  margin-bottom: 10px;
+}
+.loginSignup span {
+  color: hsl(0, 80%, 50%);
+  cursor: pointer;
+}
+
+.login-checkbox {
+  display: flex;
+  align-items: center;
+  color: hsl(0, 0%, 40%);
+}
+.login-form .login-continue {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-radius: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form input {
+  padding: 10px 20px;
+  background-color: hsl(0, 0%, 95%);
+  font-size: 1rem;
+}
+
+.login-form input::placeholder {
+  text-align: center;
+}

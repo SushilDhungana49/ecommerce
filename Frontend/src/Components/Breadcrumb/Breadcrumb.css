@@ -1,0 +1,7 @@
+.breadcrumb {
+  display: flex;
+  margin: 40px 100px 20px;
+  text-transform: capitalize;
+  align-items: center;
+  gap: 8px;
+}

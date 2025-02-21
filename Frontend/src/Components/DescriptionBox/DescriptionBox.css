@@ -1,0 +1,23 @@
+.descriptionBox {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 100px;
+  text-align: justify;
+}
+.descriptionBox-nav {
+  display: flex;
+}
+.descriptionBox-navBox {
+  padding: 20px 30px;
+  border: 2px solid hsl(0, 0%, 70%);
+  font-weight: 550;
+}
+
+.descriptionBox .fade {
+  color: hsl(0, 0%, 40%);
+  background-color: hsl(0, 0%, 98%);
+}
+.descriptionBox-description {
+  border: 2px solid hsl(0, 0%, 70%);
+  padding: 40px 80px;
+}

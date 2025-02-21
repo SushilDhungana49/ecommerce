@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #000;
+}
+
+.footer .socials ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.footer img {
+  margin: 10px auto;
+}
+.footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.footer p {
+  padding-bottom: 10px;
+}
+
+.footer .menu ul {
+  justify-content: space-around;
+  width: 50vw;
+}
+
+@media (max-width: 1024px) {
+  .footer p {
+    font-size: 0.9rem;
+  }
+}

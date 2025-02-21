@@ -1,0 +1,32 @@
+.item {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.item .item-price {
+  display: flex;
+  flex-direction: row;
+}
+.item-price-new {
+  display: inline-block;
+  font-weight: bold;
+}
+.item-price-old {
+  display: inline-block;
+  text-decoration: line-through;
+  margin-left: 20px;
+  color: hsl(0, 0%, 50%);
+}
+
+.item .item-image {
+  width: 300px;
+}
+.item:hover {
+  scale: 1.05;
+  transition: 0.1s ease;
+}
+.item .item-name {
+  margin-top: 10px;
+  font-weight: 500;
+}

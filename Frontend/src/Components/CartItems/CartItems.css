@@ -1,0 +1,108 @@
+.cartItems-main {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 3fr repeat(3, 1fr) 0.5fr;
+  gap: 30px;
+  justify-content: space-between;
+  margin: 50px 50px 50px 100px;
+  color: hsl(0, 0%, 35%);
+  font-weight: 600;
+  align-items: center;
+}
+
+.cartItems-main .cartItems-product-icon {
+  height: 80px;
+}
+
+.cartItems-product {
+  color: hsl(0, 0%, 20%);
+  margin: 20px 50px 20px 100px;
+}
+.cartItems-product button {
+  padding: 5px;
+  background-color: hsl(0, 0%, 98%);
+  font-size: 1rem;
+  border: 2px solid hsl(0, 0%, 80%);
+}
+.cartItems-quantity {
+  width: 80px;
+  padding: 10px 20px;
+  background-color: hsl(0, 0%, 98%);
+  border: 2px solid hsl(0, 0%, 80%);
+  font-size: 1rem;
+}
+
+.cartItems-totals-promo {
+  display: flex;
+  margin: 00px 200px 50px 100px;
+  justify-content: space-between;
+  gap: 100px;
+  align-items: center;
+}
+
+.cartItems-payment-btn {
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.cartItems-promo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cartItems-promo p {
+  color: hsl(0, 0%, 30%);
+}
+.cartItems-promo-input {
+  display: flex;
+  align-items: center;
+}
+
+.cartItems-promo-btn {
+  background-color: black;
+  border-radius: 0;
+  margin-top: 0;
+  height: 50px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0px 15px;
+}
+
+.cartItems-promo-btn:hover {
+  background-color: hsl(0, 0%, 20%);
+  cursor: pointer;
+}
+.cartItems-promo-input input {
+  height: 50px;
+  background-color: hsl(0, 0%, 60%);
+  font-size: 1rem;
+  color: white;
+  border: none;
+  padding-left: 20px;
+}
+
+.cartItems-promo-input input::placeholder {
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .cartItems-totals-promo {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .cartItems-totals {
+    width: 80vw;
+  }
+
+  .cartItems-totals h1 {
+    text-align: center;
+  }
+  .cartItems-totals button {
+    align-self: center;
+    font-size: 1.2rem;
+  }
+  .cartItems-main {
+    margin: 20px 30px;
+  }
+}

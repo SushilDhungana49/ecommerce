@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+  border-bottom: 3px solid hsl(0, 0%, 50%);
+  background-color: white;
+  box-shadow: 0px 1px 3px -2px black;
+}
+
+.navbar .nav-logo {
+  width: 220px;
+}
+
+.navbar .logout {
+  height: 50px;
+  border-radius: 25px;
+  width: 100px;
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 40px;
+  }
+  .nav-logo {
+    width: 150px;
+  }
+  .nav-profile {
+    height: 40px;
+  }
+}

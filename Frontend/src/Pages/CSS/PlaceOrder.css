@@ -1,0 +1,60 @@
+form {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 50px;
+}
+
+.placeOrder-form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.placeOrder-form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin: 5px auto 5px;
+}
+.placeOrder-form div {
+  display: flex;
+  gap: 10px;
+}
+.placeOrder-right {
+  display: flex;
+  flex-direction: column;
+}
+.placeOrder-paymentMethod h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.placeOrder-methods {
+  display: flex;
+  gap: 10px;
+}
+.placeOrder-paymentMethod img {
+  /* padding: 5px 15px; */
+  height: 30px;
+  align-self: center;
+  padding-top: 6px;
+}
+.placeOrder-paymentMethod button {
+  font-size: 1.2rem;
+  padding: 6px 20px;
+}
+.placeOrder .btn-dark {
+  border-radius: 0;
+  align-self: center;
+}
+
+@media (max-width: 1024px) {
+  .placeOrder-methods {
+    flex-direction: column;
+  }
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .placeOrder-form {
+    width: 100%;
+  }
+}

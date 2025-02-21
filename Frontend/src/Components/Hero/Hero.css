@@ -1,0 +1,89 @@
+.hero {
+  display: flex;
+  background: linear-gradient(to left, hsl(0, 100%, 80%), hsl(240, 100%, 80%));
+  background-size: 200% 200%;
+  animation: moveGradient 4s infinite;
+  justify-content: space-between;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
+  justify-content: center;
+  flex-basis: 900px;
+}
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .latest-collection,
+.btn {
+  display: flex;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: hsl(350, 100%, 60%);
+  color: white;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.hero .latest-collection:hover,
+.btn:hover {
+  background-color: hsl(350, 100%, 50%);
+}
+
+.arrow {
+  padding-left: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  line-height: 60px;
+  font-weight: 600;
+}
+.hero h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.hero-right .hero-image {
+  height: 600px;
+}
+
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+  .hero .hero-image {
+    height: 300px;
+  }
+
+  .latest-collection p {
+    font-size: 1rem;
+  }
+  .latest-collection img {
+    width: 25px;
+  }
+}

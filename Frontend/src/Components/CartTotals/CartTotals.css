@@ -1,0 +1,21 @@
+.cartItems-totals {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cartItems-subtotal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartItems-total {
+  font-weight: 600;
+}
+
+.cartItems-totals hr {
+  height: 2px;
+  background-color: hsl(0, 0%, 70%);
+  border: none;
+}
