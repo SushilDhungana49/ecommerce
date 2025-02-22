@@ -10,17 +10,6 @@ const Popular = () => {
   const { allProducts } = useContext(ShopContext);
   const [popular, setPopular] = useState([]);
 
-  // const fetchPopular = async () => {
-  //   const response = await axios.get(backendUrl + "/api/product/list");
-
-  //   const bestseller = response.data.products;
-  //   setPopular(bestseller.filter((item) => item.bestseller));
-  //   console.log(popular);
-  // };
-  // useEffect(() => {
-  //   fetchPopular();
-  // }, []);
-
   useEffect(() => {
     setPopular(allProducts.filter((item) => item.bestseller));
   }, []);

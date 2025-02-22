@@ -17,31 +17,8 @@ const LoginSignup = () => {
   const termsHandler = (event) => {
     setTerms(event.target.checked);
   };
-  // useEffect(() => {
-  //   termsHandler();
-  // }, []);
 
   const login = async () => {
-    // console.log("Login executed", formData);
-    // let responseData;
-
-    // await fetch("http://localhost:4000/login", {
-    //   method: "POST",
-    //   headers: {
-    //     Accept: "application/form-data",
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(formData),
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) => (responseData = data));
-    // if (responseData.success) {
-    //   localStorage.setItem("auth-token", responseData.token);
-    //   window.location.replace("/");
-    // } else {
-    //   alert(responseData.errors);
-    // }
-
     const response = await axios.post(backendUrl + "/api/user/login", {
       email: formData.email,
       password: formData.password,
@@ -62,24 +39,6 @@ const LoginSignup = () => {
   };
 
   const signUp = async () => {
-    // console.log("Signup executed", formData);
-    // let responseData;
-    // await fetch("http://localhost:4000/signup", {
-    //   method: "POST",
-    //   headers: {
-    //     Accept: "application/form-data",
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(formData),
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) => (responseData = data));
-    // if (responseData.success) {
-    //   localStorage.setItem("auth-token", responseData.token);
-    //   window.location.replace("/");
-    // } else {
-    //   alert(responseData.errors);
-    // }
     const response = await axios.post(backendUrl + "/api/user/register", {
       name: formData.username,
       email: formData.email,

@@ -1,18 +1,10 @@
 import React, { createContext, useState, useEffect } from "react";
 import { backendUrl } from "../App";
-import ProductDisplay from "../Components/ProductDisplay/ProductDisplay";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import CartItems from "../Components/CartItems/CartItems";
 import { toast } from "react-toastify";
 export const ShopContext = createContext(null);
-// const getDefaultCart = () => {
-//   var cart = {};
-//   for (let index = 0; index <= 100; index++) {
-//     cart[index] = 0;
-//   }
-//   return cart;
-// };
+
 var cart = {};
 const shippingFee = 10;
 const promoCodes = JSON.parse(import.meta.env.VITE_PROMO);
@@ -40,7 +32,6 @@ const ShopContextProvider = (props) => {
         { headers: { token } }
       );
       if (response.data.success) {
-        console.log(response);
         return response.data.usedPromo;
       } else {
         toast.error(response.data.message);
@@ -59,12 +50,12 @@ const ShopContextProvider = (props) => {
   let isUsed = false;
   const checkUsedPromo = async () => {
     usedPromo = await fetchUsedPromo();
-    console.log(usedPromo);
     isUsed = usedPromo.includes(promo);
-    console.log(isUsed);
   };
   useEffect(() => {
-    checkUsedPromo();
+    if (token) {
+      checkUsedPromo();
+    }
   }, [promo]);
 
   let discount = 0;
@@ -79,20 +70,7 @@ const ShopContextProvider = (props) => {
         }
       }
     }
-    // if (promoCodes.includes(promo)) {
-    // if (!isUsed && promo === "FIRST10%") {
-    // totalAmount = totalAmount * 0.9;
-    // } else if (!isUsed && promo === "REGULAR50") {
-    // if (totalAmount > 50) {
-    //   totalAmount = totalAmount - 50;
-    // } else {
-    //   totalAmount = 0;
-    // }
-    // }
-    // }
-    //  else {
-    //   toast.error("Invalid promo code");
-    // }
+
     return totalAmount;
   };
   const [tempTotal, setTempTotal] = useState(getTotalAmount());
@@ -131,37 +109,13 @@ const ShopContextProvider = (props) => {
   useEffect(() => {
     fetchAllProducts();
   }, [product]);
-  // useEffect(() => {
-  //   fetch(`http://localhost:4000/product/${productId}`)
-  //     .then((response) => response.json())
-  //     .then((data) => setProduct(data))
-  //     .catch((err) => console.error(err));
-  // }, [productId]);
-
-  // const fetchProduct = async () => {
-  //   const response = await axios.post(backendUrl + "/api/product/single", {
-  //     id: productId,
-  //   });
-
-  //   setProduct(response.data.product);
-
-  //   // setImage(response.data.product.image[0]);
-  // };
 
   useEffect(() => {
     fetchProduct();
   }, [productId]);
-  // useEffect(() => {
-  // allProducts.map((item) => {
-  //   if (item._id === productId) {
-  //     setProduct(item);
-  //     setImage(item.image[0]);
-  //   } else return null;
-  // });
-  // }, []);
+
   const fetchProduct = async () => {
     let product = {};
-    console.log(allProducts);
 
     product = allProducts.filter((item) => item._id === productId);
     setProduct(product[0]);
@@ -186,32 +140,16 @@ const ShopContextProvider = (props) => {
 
     setCartItems(cartData);
     if (localStorage.getItem("token")) {
-      // fetch("http://localhost:4000/addtocart", {
-      //   method: "POST",
-      //   headers: {
-      //     Accept: "application/form-data",
-      //     "auth-token": `${localStorage.getItem("auth-token")}`,
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({ itemId: itemId }),
-      // })
-      //   .then((response) => response.json())
-      //   .then((data) => console.log(data));
       const token = localStorage.getItem("token");
       const response = await axios.post(
         backendUrl + "/api/cart/add",
-        // { CartItems },
-        // { headers: { token: `${localStorage.getItem("token")}` } }
+
         { itemId, size },
         { headers: { token } }
       );
-      console.log(response.data);
     }
-    // setCartItems((p) => ({ ...p, [itemId]: p[itemId] + 1 }));
   };
-  useEffect(() => {
-    console.log(cartItems);
-  }, [cartItems]);
+  useEffect(() => {}, [cartItems]);
 
   const getTotalItems = () => {
     let totalItems = 0;
@@ -219,15 +157,11 @@ const ShopContextProvider = (props) => {
       for (const item in cartItems[items]) {
         if (cartItems[items][item] > 0) {
           totalItems += cartItems[items][item];
-          // totalItems += 1;
         }
       }
     }
     return totalItems;
   };
-  // const removeFromCart = (item._id, item.size, ) => {
-  //   setCartItems((p) => ({ ...p, [item._id][item.size]: p[item._id][item.size] - 1 }));
-  // };
 
   const getCart = async () => {
     try {
@@ -270,7 +204,6 @@ const ShopContextProvider = (props) => {
         { itemId, size, quantity },
         { headers: { token } }
       );
-      console.log(response.data);
     }
   };
 
@@ -282,7 +215,6 @@ const ShopContextProvider = (props) => {
         { promo },
         { headers: { token } }
       );
-      console.log(response.data);
     }
   };
 

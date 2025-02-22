@@ -9,10 +9,6 @@
   font-weight: bold;
 }
 .shopCategory-products {
-  /* display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(4, 1fr);
-  margin-left: 30px; */
   display: flex;
   flex-wrap: wrap;
   gap: 30px;

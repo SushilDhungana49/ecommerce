@@ -9,7 +9,6 @@ const Breadcrumb = ({ productId }) => {
   useEffect(() => {
     let prod = allProducts.find((item) => item._id === productId);
     setProduct(prod);
-    console.log(allProducts);
   }, [productId, allProducts]);
 
   return product ? (

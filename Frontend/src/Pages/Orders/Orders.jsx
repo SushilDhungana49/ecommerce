@@ -18,7 +18,6 @@ const Orders = () => {
         { headers: { token } }
       );
       if (response.data.success) {
-        console.log(response.data);
         let allItemsData = [];
         response.data.orderData.map((order) => {
           order.items.map((item) => {
@@ -31,7 +30,7 @@ const Orders = () => {
         });
         setOrderData(allItemsData.reverse());
       } else {
-        console.log(response.data.message);
+        toast.error(response.data.message);
       }
     } catch (error) {
       console.log(error);

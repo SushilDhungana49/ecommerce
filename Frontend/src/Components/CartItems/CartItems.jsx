@@ -16,30 +16,6 @@ const CartItems = () => {
     promoHandler,
   } = useContext(ShopContext);
 
-  // const promoCodes = JSON.parse(import.meta.env.VITE_PROMO);
-  // const [newTotal, setNewTotal] = useState(getTotalAmount());
-  // const [promo, setPromo] = useState("");
-  // const onChangePromo = (event) => {
-  //   setPromo(event.target.value.toUpperCase());
-  // };
-
-  // const promoHandler = () => {
-  //   if (promoCodes.includes(promo)) {
-  //     if (promo === "FIRST10%") {
-  //       setNewTotal(getTotalAmount() * 0.9);
-  //     } else if (promo === "REGULAR50") {
-  //       if (getTotalAmount() > 50) {
-  //         setNewTotal(getTotalAmount() - 50);
-  //       } else {
-  //         setNewTotal(0);
-  //       }
-  //     }
-  //   } else {
-  //     toast.error("Invalid promo code");
-  //   }
-  //   console.log(newTotal);
-  // };
-
   const [cartData, setCartData] = useState([]);
   useEffect(() => {
     const tempData = [];
@@ -56,11 +32,6 @@ const CartItems = () => {
     }
     setCartData(tempData);
   }, [cartItems]);
-
-  // useEffect(() => {
-  //   const cart = getCart();
-  //   console.log(cart);
-  // }, []);
 
   return (
     <div className="cartItems">

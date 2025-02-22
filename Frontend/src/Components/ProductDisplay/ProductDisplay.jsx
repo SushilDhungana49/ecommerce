@@ -20,7 +20,6 @@ const ProductDisplay = () => {
   };
   useEffect(() => {
     fetchProduct();
-    // console.log(product.image);
   }, [productId]);
 
   return (
@@ -56,24 +55,10 @@ const ProductDisplay = () => {
         <div className="productDisplay-description">{product.description}</div>
         <div className="productDisplay-sizes">
           <h2>Select Size</h2>
-          {/* <div className="productDisplay-sizeList">
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
-            <div>XXL</div>
-          </div> */}
+
           <div className="productDisplay-sizeList">
             <div
-              onClick={() =>
-                // setSize((prev) =>
-                //   prev.includes("S")
-                //     ? prev.filter((item) => item !== "S")
-                //     : [...prev, "S"]
-                // )
-
-                setSize(size === "S" ? "" : "S")
-              }
+              onClick={() => setSize(size === "S" ? "" : "S")}
               className={size === "S" ? "isActive" : ""}
             >
               S

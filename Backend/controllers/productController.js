@@ -40,7 +40,6 @@ const addProduct = async (req, res) => {
       bestseller,
       date: Date.now(),
     };
-    console.log(productData);
     res.json({ success: true, message: "Product added" });
     const product = new productModel(productData);
     await product.save();

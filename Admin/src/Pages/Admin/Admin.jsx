@@ -11,14 +11,7 @@ const Admin = ({ token }) => {
   return (
     <div className="admin">
       <Sidebar />
-      {/* <div className="admin-main">
-        <h1>Welcome to Admin Panal</h1>
-        <div className="admin-options">
-          <h2>Add Product</h2>
-          <h2>List Product</h2>
-          <h2>Manage Orders</h2>
-        </div>
-      </div> */}
+
       <Routes>
         <Route
           path="/addproduct"

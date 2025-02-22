@@ -119,7 +119,6 @@ const addToCart = async (req, res) => {
     const { cartItems } = req.body;
     const { token } = req.headers;
     const userId = jwt.verify(token, process.env.JWT_SECRET);
-    console.log(userId);
 
     await userModel.findOneAndUpdate(
       { _id: new mongoose.Types.ObjectId(userId.id) },

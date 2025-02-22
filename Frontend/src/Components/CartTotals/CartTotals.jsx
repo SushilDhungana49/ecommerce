@@ -26,7 +26,6 @@ const CartTotals = () => {
       <div className="cartItems-subtotal cartItems-total">
         <p>Total</p>
         <p>${cartTotal + (cartTotal > 0 ? shippingFee : 0)}</p>
-        {console.log(cartTotal)}
       </div>
     </div>
   );

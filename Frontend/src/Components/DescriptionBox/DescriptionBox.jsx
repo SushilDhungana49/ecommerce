@@ -12,7 +12,6 @@ const DescriptionBox = () => {
       id: productId,
     });
     setProduct(response.data.product);
-    console.log(product);
   };
   useEffect(() => {
     fetchProduct();

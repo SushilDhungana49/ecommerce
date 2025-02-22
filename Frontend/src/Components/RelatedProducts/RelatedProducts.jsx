@@ -15,7 +15,6 @@ const RelatedProducts = () => {
       id: productId,
     });
     setProduct(response.data.product);
-    console.log(product);
   };
   useEffect(() => {
     fetchProduct();
@@ -27,7 +26,6 @@ const RelatedProducts = () => {
       item.subcategory === product.subcategory &&
       item._id !== product._id
   );
-  console.log(relatedProducts);
   return (
     <div className="relatedProducts">
       <div className="h1-hr">

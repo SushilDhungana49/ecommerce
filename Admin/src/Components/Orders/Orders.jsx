@@ -34,15 +34,12 @@ const Orders = ({ token }) => {
       {},
       { headers: { token } }
     );
-    console.log(response.data);
     setOrders(response.data.orders);
   };
   useEffect(() => {
     fetchOrders();
   }, [token]);
-  useEffect(() => {
-    console.log(orders);
-  }, [orders]);
+  useEffect(() => {}, [orders]);
   return (
     <div className="orders">
       <h1>List of Orders</h1>

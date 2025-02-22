@@ -7,13 +7,11 @@ const Subscribers = () => {
   const [subscribers, setSubscribers] = useState([]);
   const fetchSubscribers = async () => {
     const response = await axios.get(backendUrl + "/api/subscribers/list");
-    console.log(response.data);
     setSubscribers(response.data.subscribers);
   };
   useEffect(() => {
     fetchSubscribers();
   }, []);
-  console.log(subscribers);
 
   return (
     <div className="subscribers">
